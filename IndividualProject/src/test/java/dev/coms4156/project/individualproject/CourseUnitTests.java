@@ -31,5 +31,43 @@ public class CourseUnitTests {
    * The test course instance used for testing.
    */
   public static Course testCourse;
+
+
+  /**
+   * tests the enrollStudent method.
+   */
+  @Test
+  public void enrollStudentTest() {
+    testCourse.setEnrolledStudentCount(200);
+    testCourse.enrollStudent();
+    assertEquals(201, testCourse.getEnrolledStudentCount());
+  }
+
+  /**
+   * tests the dropStudent method.
+   */
+  @Test
+  public void dropStudentTest() {
+    testCourse.setEnrolledStudentCount(200);
+    testCourse.dropStudent();
+    assertEquals(199, testCourse.getEnrolledStudentCount());
+  }
+
+
+  /**
+   * tests the getCourseLocation method.
+   */
+  @Test
+  public void getCourseLocationTest() {
+    String expectedResult = "417 IAB";
+    assertEquals(expectedResult, testCourse.getCourseLocation());
+  }
+
+
+
+
+
+
+
 }
 

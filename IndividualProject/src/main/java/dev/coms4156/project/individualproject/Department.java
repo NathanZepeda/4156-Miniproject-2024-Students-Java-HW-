@@ -43,7 +43,7 @@ public class Department implements Serializable {
    * @return The name of the department chair.
    */
   public String getDepartmentChair() {
-    return "this.departmentChair";
+    return this.departmentChair;
   }
 
   /**
@@ -99,6 +99,7 @@ public class Department implements Serializable {
    *
    * @return A string representing the department.
    */
+  @Override
   public String toString() {
     StringBuilder result = new StringBuilder();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
